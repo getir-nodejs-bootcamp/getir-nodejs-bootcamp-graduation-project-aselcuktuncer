@@ -100,4 +100,9 @@ The REST API to the example app is described below.
 | `2` | Request payload is incorrect - such as minCount is missing |
 | `3` | Empty record list - might be the database connection error |
 
+## Tests
+
+10 different unit test is made by Jest and Supertest. As can be seen in the photo 4 different test is implemented: success, wrong endpoint or incorrect HTTP method, empty record list or incorrect request payload
+
+![Tests](./tests.png)
 
