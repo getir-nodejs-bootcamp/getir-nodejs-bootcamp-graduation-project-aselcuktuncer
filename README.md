@@ -2,7 +2,7 @@
 
 This is a bare-bones of a application providing a REST API with a single endpoint that fetches the data in the provided MongoDB collection and return the results in the requested format.
 
-In this project an application is created using Express framework. Application is only handle POST requests. After the POST request with appropriate request payload it fetches the data in the provided MongoDB collection and return the results in the requested format. Also Mongoose is used as ODM library. Unit tests are made by Jest.
+In this project an application is created using Express framework. Application is only handle POST requests. After the POST request with appropriate request payload it fetches the data in the provided MongoDB collection and return the results in the requested format. Also Mongoose is used as ODM library. Unit tests are made by Jest and Supertest. Besides these, Joi is used for validation, dotenv is used as environment variable module and http-status is used for http status code. Moreover, nodemon is used during development phase.
 
 VS Code is used as IDE, Postman is used for API testing and MongoDB Compass is used for MongoDB GUI.
 
@@ -102,7 +102,7 @@ The REST API to the example app is described below.
 
 ## Tests
 
-10 different unit test is made by Jest and Supertest. As can be seen in the photo 4 different test is implemented: success, wrong endpoint or incorrect HTTP method, empty record list or incorrect request payload
+10 different unit test is made by Jest and Supertest. As can be seen in the photo, 4 different tests is implemented: success, wrong endpoint or incorrect HTTP method, empty record list or incorrect request payload
 
 ![Tests](./tests.png)
 
