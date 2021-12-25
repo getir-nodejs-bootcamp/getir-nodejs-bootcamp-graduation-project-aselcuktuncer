@@ -13,9 +13,6 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", () => {
-  res.send("Hello world!")
-})
 app.use("/records", RecordRoutes);
 //! if request is not met, sent to the error handler
 app.use((req, res, next) => {
