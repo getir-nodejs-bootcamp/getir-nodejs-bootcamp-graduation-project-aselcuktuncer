@@ -1,0 +1,27 @@
+{
+  "name": "getir-case-study",
+  "version": "1.0.0",
+  "description": "RESTful API with a single endpoint for Getir Case Study Challenge",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon src/server.js"
+  },
+  "author": "aselcuktuncer",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "http-status": "^1.5.0",
+    "joi": "^17.5.0",
+    "mongoose": "^6.1.3"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
