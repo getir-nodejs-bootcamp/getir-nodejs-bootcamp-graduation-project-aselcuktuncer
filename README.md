@@ -6,6 +6,8 @@ In this project an application is created using Express framework. Application i
 
 VS Code is used as IDE, Postman is used for API testing and MongoDB Compass is used for MongoDB GUI.
 
+Base URL : https://getir-case-study-aselcuktuncer.herokuapp.com/records
+
 Swagger Documentation: https://app.swaggerhub.com/apis-docs/aselcuktuncer/getir-case-study/1.0.0
 
 The entire application is contained within the `src` folder.
@@ -32,7 +34,9 @@ The entire application is contained within the `src` folder.
 
 `server.js` runs the app.listen() method.
 
+## Request Using Endpoint URL
 
+    https://getir-case-study-aselcuktuncer.herokuapp.com/records
 
 ## Git Clone Repository
 
