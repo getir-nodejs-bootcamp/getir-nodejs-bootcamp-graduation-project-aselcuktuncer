@@ -26,7 +26,7 @@ The entire application is contained within the `src` folder.
 
 `routes` contains routes which is only a POST method to /records
 
-`servies` carry out database operations
+`services` carry out database operations
 
 `validations` ensure us to send appropriate request payload
 
