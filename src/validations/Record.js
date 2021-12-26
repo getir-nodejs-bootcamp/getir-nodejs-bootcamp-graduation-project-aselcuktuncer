@@ -4,8 +4,8 @@ const Joi = require("joi");
 const getAllRecords = Joi.object({
   startDate: Joi.string().required().min(8),
   endDate: Joi.string().required().min(8),
-  minCount: Joi.number().positive().required(),
-  maxCount: Joi.number().positive().required(),
+  minCount: Joi.number().min(0).required(),
+  maxCount: Joi.number().min(0).required(),
 });
 
 module.exports = {
