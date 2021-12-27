@@ -76,7 +76,7 @@ The REST API to the example app is described below.
     Status: 200 OK
     {
         "code": 0,
-        "msg": "success",
+        "msg": "Success",
         "records": [
             {
                 "key": "TAKwGc6Jr4i8Z487",
