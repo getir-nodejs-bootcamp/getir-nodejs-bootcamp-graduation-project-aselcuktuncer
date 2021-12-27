@@ -6,7 +6,7 @@ In this project an application is created using Express framework. Application i
 
 VS Code is used as IDE, Postman is used for API testing and MongoDB Compass is used for MongoDB GUI.
 
-Base URL : https://getir-case-study-aselcuktuncer.herokuapp.com/records
+Base URL :https://getir-challenge-aselcuktuncer.herokuapp.com/records
 
 Swagger Documentation: https://app.swaggerhub.com/apis-docs/aselcuktuncer/getir-case-study/1.0.0
 
@@ -36,7 +36,7 @@ The entire application is contained within the `src` folder.
 
 ## Request Using Endpoint URL
 
-    https://getir-case-study-aselcuktuncer.herokuapp.com/records
+    https://getir-challenge-aselcuktuncer.herokuapp.com/records
 
 ## Git Clone Repository
 
@@ -91,7 +91,18 @@ The REST API to the example app is described below.
         ]
     }
 
-## Errors and Error Types
+## Paramaters
+
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `startDate` | `Date` | `YYYY-MM-DD format` |
+  `endDate` | `Date`|`YYYY-MM-DD format`
+  `minCount`|`Number`| `For filtering the counts array`
+  `maxCount`|`Number`| `For filtering the counts array`
+
+
+## Error Types
 
 | Code | Description |
 | --- | --- |
@@ -102,7 +113,10 @@ The REST API to the example app is described below.
 
 ## Tests
 
-10 different unit test is made by Jest and Supertest. As can be seen in the photo, 4 different tests is implemented: success, wrong endpoint or incorrect HTTP method, empty record list or incorrect request payload
+12 different unit test is made by Jest and Supertest. As can be seen in the photo, 4 different tests type are implemented: success, wrong endpoint or incorrect HTTP method, empty record list or incorrect request payload
 
 ![Tests](./tests.png)
 
+## Demo
+
+    https://getir-challenge-aselcuktuncer.herokuapp.com/records

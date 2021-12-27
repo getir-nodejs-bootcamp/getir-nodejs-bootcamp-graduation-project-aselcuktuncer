@@ -30,7 +30,7 @@ describe("Test of the RESTFUL API:", () => {
 
     expect(response.statusCode).toBe(200);
     expect(response.body.code).toBe(0);
-    expect(response.body.msg).toBe("success");
+    expect(response.body.msg).toBe("Success");
     expect(response.body.records[0].totalCount).toBe(310);
   });
 
@@ -45,7 +45,7 @@ describe("Test of the RESTFUL API:", () => {
 
     expect(response.statusCode).toBe(200);
     expect(response.body.code).toBe(0);
-    expect(response.body.msg).toBe("success");
+    expect(response.body.msg).toBe("Success");
     expect(response.body.records.length).toBe(6);
   });
 
@@ -60,7 +60,7 @@ describe("Test of the RESTFUL API:", () => {
 
     expect(response.statusCode).toBe(200);
     expect(response.body.code).toBe(0);
-    expect(response.body.msg).toBe("success");
+    expect(response.body.msg).toBe("Success");
     expect(response.body.records[3].key).toBe("ibfRLaFT");
   });
 
@@ -106,6 +106,38 @@ describe("Test of the RESTFUL API:", () => {
     expect(response.body.records.lenght).toBe(undefined);
   });
 
+  //! startDate is greater than endDate 
+  test("Payload Error - startDate is greater than endDate  error", async () => {
+    const data = {
+      startDate: "2019-01-26",
+      endDate: "2018-02-02",
+      minCount: 100,
+      maxCount: 500,
+    };
+    const response = await request(app).post("/records").send(data);
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body.code).toBe(2);
+    expect(response.body.msg).toBe(`\"endDate\" must be greater than \"ref:startDate\"`);
+    expect(response.body.records.lenght).toBe(undefined);
+  });
+
+   //! minCount is greater than maxCount 
+   test("Payload Error - minCount is greater than maxCount  error", async () => {
+    const data = {
+      startDate: "2015-01-26",
+      endDate: "2018-02-02",
+      minCount: 750,
+      maxCount: 500,
+    };
+    const response = await request(app).post("/records").send(data);
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body.code).toBe(2);
+    expect(response.body.msg).toBe(`\"maxCount\" must be greater than ref:minCount`);
+    expect(response.body.records.lenght).toBe(undefined);
+  });
+
   //! following 4 tests are incorrect payload tests
   test("Incorrect POST body - maxCount is missing", async () => {
     const data = {
@@ -146,7 +178,7 @@ describe("Test of the RESTFUL API:", () => {
 
     expect(response.statusCode).toBe(400);
     expect(response.body.code).toBe(2);
-    expect(response.body.msg).toBe(`\"startDate\" must be a string`);
+    expect(response.body.msg).toBe(`\"startDate\" must be a valid date`);
     expect(response.body.records.lenght).toBe(undefined);
   });
 

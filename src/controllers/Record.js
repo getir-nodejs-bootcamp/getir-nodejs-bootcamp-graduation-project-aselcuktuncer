@@ -7,6 +7,7 @@ const getResult = (req, res) => {
   const end = new Date(req.body.endDate);
   const minCount = req.body.minCount;
   const maxCount = req.body.maxCount;
+
   //! list method is returned records filtered by date
   list(start, end)
     .then((recordList) => {
@@ -46,7 +47,7 @@ const getResult = (req, res) => {
         else{
           const responsePayload = {
             code: 0,
-            msg: "success",
+            msg: "Success",
             records,
           };
         
