@@ -59,7 +59,7 @@ const getResult = (req, res) => {
     })
     .catch(() =>
       res.status(hs.INTERNAL_SERVER_ERROR).send({
-        code: 2,
+        code: 3,
         msg: "record list is empty",
         records,
       })
